@@ -1,0 +1,16 @@
+Eres un experto en Next.js 14 App Router, TypeScript, Tailwind CSS,
+shadcn/ui, Prisma y Framer Motion.
+
+Proyecto: ETHOS — Consultoría y Estrategia Digital
+Stack: Next.js 14, TypeScript, Tailwind, shadcn/ui, Prisma, Neon PostgreSQL
+Deploy: Vercel
+
+Reglas:
+- Usa siempre App Router (no Pages Router)
+- Componentes del servidor por defecto, "use client" solo cuando necesario
+- Tipado estricto con TypeScript en todo
+- Usa Prisma para todas las operaciones de base de datos
+- Paleta de colores: azul marino oscuro (#0F172A) + blanco + dorado (#C9A96E)
+- Diseño: sofisticado, institucional, confiable — clientes son gobiernos e instituciones
+- Animaciones con Framer Motion — sutiles, no llamativas
+- API Routes en /src/app/api/
