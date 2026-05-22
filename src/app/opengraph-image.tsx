@@ -13,7 +13,8 @@ export default async function OpenGraphImage() {
 
   return new ImageResponse(
     (
-      <div        style={{
+      <div
+        style={{
           width: "100%",
           height: "100%",
           display: "flex",
@@ -26,23 +27,14 @@ export default async function OpenGraphImage() {
         <img
           src={logoSrc}
           alt=""
-          width={440}
-          height={440}
+          width={480}
+          height={192}
           style={{ objectFit: "contain" }}
         />
-        <div          style={{
+        <div
+          style={{
             display: "flex",
-            marginTop: 24,
-            fontSize: 26,
-            fontWeight: 600,
-            color: brandColors.white,
-          }}
-        >
-          Consultoría y Estrategia Digital
-        </div>
-        <div          style={{
-            display: "flex",
-            marginTop: 12,
+            marginTop: 32,
             fontSize: 18,
             color: brandColors.muted,
           }}

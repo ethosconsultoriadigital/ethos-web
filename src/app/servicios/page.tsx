@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { SectionImage } from "@/components/brand/section-image";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -26,14 +27,23 @@ export default function ServiciosPage() {
           const Icon = service.icon;
           return (
             <FadeIn key={service.title} delay={index * 0.05}>
-              <article className="rounded-xl border border-border/60 bg-card/40 p-6">
-                <Icon className="size-5 text-ethos-gold" aria-hidden />
-                <h2 className="mt-4 text-lg font-semibold text-ethos-white">
-                  {service.title}
-                </h2>
-                <p className="mt-2 text-sm leading-relaxed text-ethos-muted">
-                  {service.description}
-                </p>
+              <article className="overflow-hidden rounded-xl border border-border/60 bg-card/40">
+                <SectionImage
+                  imageKey={service.visual}
+                  alt={service.title}
+                  aspectClassName="aspect-[2/1]"
+                  frameClassName="rounded-none rounded-t-xl border-0 border-b border-border/60 ring-0"
+                  sizes="(max-width: 768px) 100vw, 500px"
+                />
+                <div className="p-6">
+                  <Icon className="size-5 text-ethos-gold" aria-hidden />
+                  <h2 className="mt-4 text-lg font-semibold text-ethos-white">
+                    {service.title}
+                  </h2>
+                  <p className="mt-2 text-sm leading-relaxed text-ethos-muted">
+                    {service.description}
+                  </p>
+                </div>
               </article>
             </FadeIn>
           );

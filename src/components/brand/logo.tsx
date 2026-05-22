@@ -4,17 +4,24 @@ import Link from "next/link";
 import { siteConfig } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
+type LogoVariant = "header" | "footer";
+
 type LogoProps = {
-  variant?: "header" | "footer";
+  variant?: LogoVariant;
   linked?: boolean;
   className?: string;
   priority?: boolean;
 };
 
-const variantStyles = {
-  header: "h-9 w-auto sm:h-10",
-  footer: "h-14 w-auto",
-} as const;
+const variantStyles: Record<LogoVariant, string> = {
+  header: "h-10 w-auto sm:h-12 md:h-14",
+  footer: "h-14 w-auto sm:h-16",
+};
+
+const variantSizes: Record<LogoVariant, string> = {
+  header: "(max-width: 640px) 160px, 220px",
+  footer: "280px",
+};
 
 export function Logo({
   variant = "header",
@@ -26,12 +33,13 @@ export function Logo({
     <Image
       src={siteConfig.logo}
       alt={siteConfig.logoAlt}
-      width={320}
-      height={320}
-      priority={priority}
-      sizes={variant === "header" ? "160px" : "180px"}
+      width={400}
+      height={160}
+      priority={priority || variant === "header"}
+      sizes={variantSizes[variant]}
       className={cn(
-        "object-contain object-left",
+        "object-contain",
+        variant === "header" ? "object-left" : "object-center",
         variantStyles[variant],
         className
       )}
@@ -43,7 +51,10 @@ export function Logo({
   }
 
   return (
-    <Link href="/" className="inline-flex shrink-0 transition-opacity hover:opacity-90">
+    <Link
+      href="/"
+      className="inline-flex shrink-0 transition-opacity hover:opacity-90"
+    >
       {image}
     </Link>
   );

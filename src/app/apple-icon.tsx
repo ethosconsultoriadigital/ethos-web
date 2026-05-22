@@ -24,8 +24,8 @@ export default async function AppleIcon() {
         <img
           src={logoSrc}
           alt=""
-          width={148}
-          height={148}
+          width={320}
+          height={128}
           style={{ objectFit: "contain" }}
         />
       </div>

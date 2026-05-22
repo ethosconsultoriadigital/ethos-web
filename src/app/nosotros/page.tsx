@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import { SectionImage } from "@/components/brand/section-image";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
@@ -21,7 +22,8 @@ export default function NosotrosPage() {
         title="Filosofía de firma"
         description="ETHOS nace del principio aristotélico de la credibilidad: sin ethos, no hay persuasión legítima ni liderazgo institucional sostenible."
       />
-      <div className="max-w-3xl space-y-8">
+      <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+        <div className="max-w-3xl space-y-8">
         <FadeIn>
           <p className="text-lg leading-relaxed text-ethos-muted">
             Somos una firma de consultoría y estrategia digital con sede en
@@ -42,6 +44,14 @@ export default function NosotrosPage() {
             </article>
           </FadeIn>
         ))}
+        </div>
+        <FadeIn delay={0.05}>
+          <SectionImage
+            imageKey="credibility"
+            aspectClassName="aspect-[4/3] sticky top-28"
+            sizes="420px"
+          />
+        </FadeIn>
       </div>
       <FadeIn className="mt-12">
         <Link href="/contacto" className={cn(buttonVariants({ size: "lg" }))}>

@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-ethos-navy/90 px-6 backdrop-blur-md">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between">
+      <div className="mx-auto flex min-h-24 max-w-6xl items-center justify-between gap-4 py-2 sm:min-h-28">
         <Logo variant="header" priority />
 
         <nav

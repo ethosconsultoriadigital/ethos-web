@@ -23,9 +23,9 @@ export default async function Icon() {
         <img
           src={logoSrc}
           alt=""
-          width={30}
-          height={30}
-          style={{ objectFit: "contain" }}
+          width={80}
+          height={32}
+          style={{ objectFit: "cover", objectPosition: "left center" }}
         />
       </div>
     ),
