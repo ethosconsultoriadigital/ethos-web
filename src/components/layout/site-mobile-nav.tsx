@@ -25,7 +25,7 @@ export function SiteMobileNav() {
 
       {open ? (
         <div
-          className="fixed inset-0 top-24 z-40 bg-ethos-navy/98 px-6 py-8 sm:top-28 md:hidden"
+          className="fixed inset-0 top-20 z-40 bg-ethos-navy/98 px-6 py-8 sm:top-24 md:hidden"
           role="dialog"
           aria-modal="true"
         >

@@ -9,11 +9,11 @@ import { cn } from "@/lib/utils";
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-50 border-b border-border/60 bg-ethos-navy/90 px-6 backdrop-blur-md">
-      <div className="mx-auto flex min-h-24 max-w-6xl items-center justify-between gap-4 py-2 sm:min-h-28">
+      <div className="mx-auto flex min-h-20 max-w-6xl items-center justify-between gap-4 py-3 sm:min-h-24 sm:gap-6 sm:py-4">
         <Logo variant="header" priority />
 
         <nav
-          className="hidden items-center gap-8 md:flex"
+          className="hidden items-center gap-6 md:flex lg:gap-8"
           aria-label="Principal"
         >
           {navigation.map((item) => (

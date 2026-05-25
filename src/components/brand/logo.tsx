@@ -14,12 +14,12 @@ type LogoProps = {
 };
 
 const variantStyles: Record<LogoVariant, string> = {
-  header: "h-10 w-auto sm:h-12 md:h-14",
+  header: "h-14 w-auto sm:h-16",
   footer: "h-14 w-auto sm:h-16",
 };
 
 const variantSizes: Record<LogoVariant, string> = {
-  header: "(max-width: 640px) 160px, 220px",
+  header: "(max-width: 640px) 200px, 280px",
   footer: "280px",
 };
 
@@ -53,7 +53,10 @@ export function Logo({
   return (
     <Link
       href="/"
-      className="inline-flex shrink-0 transition-opacity hover:opacity-90"
+      className={cn(
+        "inline-flex shrink-0 items-center transition-opacity hover:opacity-90",
+        variant === "header" && "py-0.5"
+      )}
     >
       {image}
     </Link>
