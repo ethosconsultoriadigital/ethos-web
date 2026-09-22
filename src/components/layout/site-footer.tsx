@@ -50,6 +50,14 @@ export function SiteFooter() {
                 Formulario de contacto
               </Link>
             </li>
+            <li>
+              <Link
+                href="/aviso-de-privacidad"
+                className="transition-colors hover:text-ethos-gold"
+              >
+                Aviso de privacidad
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
@@ -58,9 +66,17 @@ export function SiteFooter() {
         <p>
           © {year} {siteConfig.name}. Todos los derechos reservados.
         </p>
-        <p className="text-ethos-muted/80">
-          Estrategia digital · Reputación institucional
-        </p>
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:gap-6">
+          <Link
+            href="/aviso-de-privacidad"
+            className="transition-colors hover:text-ethos-gold"
+          >
+            Aviso de privacidad
+          </Link>
+          <p className="text-ethos-muted/80">
+            Monitoreo de medios · Reputación corporativa
+          </p>
+        </div>
       </div>
     </footer>
   );
