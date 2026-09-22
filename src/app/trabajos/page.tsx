@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils";
 export const metadata = {
   title: "Trabajos",
   description:
-    "Experiencia y proyectos de ETHOS en reputación digital, estrategia institucional y consultoría para gobiernos, campañas e instituciones en México.",
+    "Experiencia y proyectos de ETHOS en reputación digital, estrategia institucional y consultoría para empresas e instituciones en México.",
 };
 
 export default function TrabajosPage() {

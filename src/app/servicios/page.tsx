@@ -20,7 +20,7 @@ export default function ServiciosPage() {
       <SectionHeading
         eyebrow="Servicios"
         title="Capacidades estratégicas"
-        description="Cada servicio se diseña a la medida del contexto institucional, el calendario político y el perfil de riesgo de su organización."
+        description="Cada servicio se diseña a la medida del contexto organizacional, el perfil de riesgo y los objetivos de su empresa o institución."
       />
       <div className="grid gap-5 sm:grid-cols-2">
         {services.map((service, index) => {

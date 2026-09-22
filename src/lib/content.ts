@@ -28,7 +28,7 @@ export const valuePropositions = [
     visual: "discretion" as SiteImageKey,
     title: "Discreción operativa",
     description:
-      "Protocolos confidenciales y ejecución silenciosa. Su reputación se gestiona con el mismo rigor que un asunto de estado.",
+      "Protocolos confidenciales y ejecución silenciosa. Su reputación se gestiona con el mismo rigor que un asunto estratégico de primer nivel.",
   },
   {
     visual: "response" as SiteImageKey,
@@ -65,7 +65,7 @@ export const services: ServiceItem[] = [
     visual: "crisis",
     title: "Contención de crisis",
     description:
-      "Protocolos de respuesta inmediata, gestión de vocerías y control de daños en escenarios de alta exposición.",
+      "Protocolos de respuesta inmediata, gestión de comunicación ejecutiva y control de daños en escenarios de alta exposición.",
   },
   {
     icon: Radio,
@@ -93,27 +93,27 @@ export const services: ServiceItem[] = [
 export const useCases = [
   {
     visual: "government" as SiteImageKey,
-    title: "Gobiernos entrantes",
+    title: "Empresas en transformación",
     description:
-      "Construcción de narrativa de llegada, alineación de vocerías y protección del capital político desde el primer día.",
+      "Construcción de narrativa de cambio, alineación de comunicación interna y externa, y protección de reputación desde el primer día.",
   },
   {
     visual: "campaign" as SiteImageKey,
-    title: "Campañas políticas",
+    title: "Lanzamientos y posicionamiento",
     description:
-      "Estrategia digital integral, contranarrativa y gestión de riesgos en ciclos electorales de alta tensión mediática.",
+      "Estrategia digital integral, mensajes calibrados y gestión de riesgos en ciclos de alta exposición mediática.",
   },
   {
     visual: "institution" as SiteImageKey,
-    title: "Instituciones públicas y privadas",
+    title: "Instituciones y corporativos",
     description:
       "Fortalecimiento de confianza institucional, protocolos de comunicación y respuesta coordinada ante escrutinio público.",
   },
   {
     visual: "profile" as SiteImageKey,
-    title: "Figuras de alto perfil",
+    title: "Directivos y marca personal",
     description:
-      "Gestión discreta de reputación personal, prevención de crisis y posicionamiento en entornos mediáticos hostiles.",
+      "Gestión discreta de reputación profesional, prevención de crisis y posicionamiento en entornos mediáticos exigentes.",
   },
 ] as const;
 
@@ -145,11 +145,11 @@ export const whyEthos = [
   {
     title: "Operación desde Guadalajara",
     description:
-      "Presencia estratégica en el occidente de México con alcance nacional. Conocemos el contexto institucional y político local.",
+      "Presencia estratégica en el occidente de México con alcance nacional. Conocemos el contexto institucional y empresarial local.",
   },
   {
     title: "Enfoque de firma, no de agencia",
     description:
-      "Equipos senior, relación directa con decisiones y metodología de consultoría — no campañas genéricas ni volumen sin criterio.",
+      "Equipos senior, relación directa con decisiones y metodología de consultoría — no soluciones genéricas ni volumen sin criterio.",
   },
 ] as const;

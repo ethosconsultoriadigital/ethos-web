@@ -10,7 +10,7 @@ export function UseCasesSection() {
       <SectionHeading
         eyebrow="Casos de uso"
         title="Diseñado para quienes no pueden fallar en público"
-        description="Acompañamos a actores con exposición mediática, responsabilidad institucional y cero margen para la improvisación."
+        description="Acompañamos a empresas e instituciones con exposición mediática, responsabilidad reputacional y cero margen para la improvisación."
       />
 
       <div className="grid gap-5 md:grid-cols-2">

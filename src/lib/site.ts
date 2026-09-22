@@ -4,15 +4,16 @@ export const siteConfig = {
   logoAlt: "ETHOS — Consultoría y Estrategia Digital",
   title: "ETHOS | Consultoría y Estrategia Digital",
   description:
-    "Firma especializada en protección de reputación digital, colocación estratégica de contenido y automatización institucional para gobiernos, campañas e instituciones en México.",
+    "Firma especializada en protección de reputación digital, colocación estratégica de contenido y automatización institucional para empresas e instituciones en México.",
   keywords: [
     "consultoría digital",
     "estrategia digital",
     "reputación digital",
+    "reputación corporativa",
     "Guadalajara",
     "México",
-    "gobierno",
-    "campañas políticas",
+    "empresas",
+    "estrategia institucional",
   ],
   locale: "es_MX",
   url:

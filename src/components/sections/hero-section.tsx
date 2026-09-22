@@ -37,7 +37,7 @@ export function HeroSection() {
           <FadeIn delay={0.16}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ethos-muted md:text-xl">
               Protección de reputación, colocación táctica de contenido y
-              contención de crisis para gobiernos, campañas e instituciones que
+              contención de crisis para empresas e instituciones que
               no pueden permitirse improvisar.
             </p>
           </FadeIn>

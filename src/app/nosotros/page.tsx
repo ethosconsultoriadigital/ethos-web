@@ -27,9 +27,9 @@ export default function NosotrosPage() {
         <FadeIn>
           <p className="text-lg leading-relaxed text-ethos-muted">
             Somos una firma de consultoría y estrategia digital con sede en
-            Guadalajara. Acompañamos a gobiernos entrantes, campañas políticas,
-            instituciones y figuras de alto perfil que requieren precisión,
-            confidencialidad y respuesta en escenarios de alta exposición.
+            Guadalajara. Acompañamos a empresas, organizaciones e instituciones
+            que requieren precisión, confidencialidad y respuesta en escenarios
+            de alta exposición.
           </p>
         </FadeIn>
         {whyEthos.map((item, index) => (
