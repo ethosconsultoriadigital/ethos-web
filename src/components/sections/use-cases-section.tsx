@@ -9,8 +9,8 @@ export function UseCasesSection() {
     <Section id="casos" className="bg-ethos-navy-light/40">
       <SectionHeading
         eyebrow="Casos de uso"
-        title="Diseñado para quienes no pueden fallar en público"
-        description="Acompañamos a empresas e instituciones con exposición mediática, responsabilidad reputacional y cero margen para la improvisación."
+        title="Diseñado para equipos que necesitan información oportuna"
+        description="EthosIA ayuda a organizaciones y profesionales autorizados a consultar, organizar y evaluar información publicada sobre sus marcas y temas de interés."
       />
 
       <div className="grid gap-5 md:grid-cols-2">

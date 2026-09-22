@@ -3,7 +3,7 @@ import type { LucideIcon } from "lucide-react";
 import {
   Bot,
   Eye,
-  Megaphone,
+  Radar,
   Radio,
   Shield,
   ShieldAlert,
@@ -20,21 +20,21 @@ export const navigation = [
 export const valuePropositions = [
   {
     visual: "precision" as SiteImageKey,
-    title: "Precisión estratégica",
+    title: "Precisión en el monitoreo",
     description:
-      "Diagnóstico riguroso y planes de acción medibles para proteger la credibilidad institucional en entornos digitales complejos.",
+      "Configuramos temas, marcas y fuentes de interés para cada cliente y conservamos el origen de cada resultado.",
   },
   {
     visual: "discretion" as SiteImageKey,
-    title: "Discreción operativa",
+    title: "Confidencialidad operativa",
     description:
-      "Protocolos confidenciales y ejecución silenciosa. Su reputación se gestiona con el mismo rigor que un asunto estratégico de primer nivel.",
+      "Protegemos la información y configuración de cada cuenta mediante accesos y procesos controlados.",
   },
   {
     visual: "response" as SiteImageKey,
-    title: "Respuesta en tiempo crítico",
+    title: "Alertas oportunas",
     description:
-      "Estructuras de contención activadas en horas, no días. Cuando la narrativa se acelera, ETHOS ya está en posición.",
+      "Notificamos a los usuarios autorizados cuando existe información disponible para su consulta.",
   },
 ] as const;
 
@@ -51,35 +51,35 @@ export const services: ServiceItem[] = [
     visual: "shield",
     title: "Protección de reputación",
     description:
-      "Monitoreo, análisis de riesgo narrativo y blindaje preventivo de la imagen digital e institucional.",
+      "Seguimiento de menciones públicas y análisis de temas que pueden afectar la reputación de una empresa o marca.",
   },
   {
-    icon: Megaphone,
+    icon: Radar,
     visual: "megaphone",
-    title: "Colocación táctica de contenido",
+    title: "Monitoreo de medios",
     description:
-      "Posicionamiento estratégico en medios y plataformas con mensajes calibrados para audiencias de alto impacto.",
+      "Seguimiento de publicaciones en medios y fuentes digitales conforme a los criterios configurados por cada cliente.",
   },
   {
     icon: ShieldAlert,
     visual: "crisis",
-    title: "Contención de crisis",
+    title: "Alertas de riesgo reputacional",
     description:
-      "Protocolos de respuesta inmediata, gestión de comunicación ejecutiva y control de daños en escenarios de alta exposición.",
+      "Identificación y notificación oportuna de información que requiere revisión por parte del cliente.",
   },
   {
     icon: Radio,
     visual: "listening",
-    title: "Social listening institucional",
+    title: "Análisis de conversación digital",
     description:
-      "Inteligencia en tiempo real sobre conversaciones, actores y tendencias que afectan su posicionamiento.",
+      "Organización y clasificación de menciones públicas para facilitar su interpretación y seguimiento.",
   },
   {
     icon: Bot,
     visual: "automation",
     title: "Automatización digital",
     description:
-      "Bots de atención, flujos institucionales y herramientas que escalan la presencia sin perder control del mensaje.",
+      "Flujos automatizados para distribuir alertas y reportes únicamente a usuarios autorizados y con consentimiento.",
   },
   {
     icon: Eye,
@@ -93,27 +93,27 @@ export const services: ServiceItem[] = [
 export const useCases = [
   {
     visual: "government" as SiteImageKey,
-    title: "Empresas en transformación",
+    title: "Empresas y marcas",
     description:
-      "Construcción de narrativa de cambio, alineación de comunicación interna y externa, y protección de reputación desde el primer día.",
+      "Monitoreo de menciones, cobertura y temas relacionados con la reputación corporativa.",
   },
   {
     visual: "campaign" as SiteImageKey,
-    title: "Lanzamientos y posicionamiento",
+    title: "Equipos de comunicación",
     description:
-      "Estrategia digital integral, mensajes calibrados y gestión de riesgos en ciclos de alta exposición mediática.",
+      "Alertas y reportes para revisar información relevante y coordinar respuestas internas.",
   },
   {
     visual: "institution" as SiteImageKey,
-    title: "Instituciones y corporativos",
+    title: "Agencias y consultoras",
     description:
-      "Fortalecimiento de confianza institucional, protocolos de comunicación y respuesta coordinada ante escrutinio público.",
+      "Espacios de monitoreo separados para administrar los criterios y entregables de cada cliente.",
   },
   {
     visual: "profile" as SiteImageKey,
-    title: "Directivos y marca personal",
+    title: "Directivos y voceros corporativos",
     description:
-      "Gestión discreta de reputación profesional, prevención de crisis y posicionamiento en entornos mediáticos exigentes.",
+      "Seguimiento de menciones públicas y contexto mediático para proteger la reputación profesional.",
   },
 ] as const;
 

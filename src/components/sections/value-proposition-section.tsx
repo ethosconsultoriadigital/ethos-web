@@ -9,8 +9,8 @@ export function ValuePropositionSection() {
     <Section id="propuesta" className="bg-ethos-navy-light/40">
       <SectionHeading
         eyebrow="Propuesta de valor"
-        title="Estrategia digital con estándar institucional"
-        description="No somos una agencia creativa. Somos una firma de consultoría que opera con la precisión que sus stakeholders esperan."
+        title="Información digital para decisiones oportunas"
+        description="Combinamos tecnología, monitoreo y análisis profesional para ayudar a empresas y organizaciones a entender su presencia en medios y entornos digitales."
       />
 
       <div className="grid gap-6 md:grid-cols-3">

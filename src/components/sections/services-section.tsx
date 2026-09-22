@@ -13,8 +13,8 @@ export function ServicesSection() {
     <Section id="servicios">
       <SectionHeading
         eyebrow="Servicios"
-        title="Capacidades estratégicas de alto impacto"
-        description="Soluciones integradas para proteger, posicionar y responder con control en el ecosistema digital."
+        title="Servicios de monitoreo e inteligencia de medios"
+        description="Soluciones integradas para monitorear, analizar y alertar con control en el ecosistema digital."
       />
 
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

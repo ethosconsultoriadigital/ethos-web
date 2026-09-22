@@ -11,7 +11,7 @@ import { cn } from "@/lib/utils";
 export const metadata = {
   title: "Servicios",
   description:
-    "Servicios de ETHOS: reputación digital, crisis institucional, social listening, automatización y ciberseguridad.",
+    "Servicios de monitoreo de medios, protección de reputación, alertas, análisis de conversación digital, automatización y ciberseguridad.",
 };
 
 export default function ServiciosPage() {
@@ -19,8 +19,8 @@ export default function ServiciosPage() {
     <Section className="pt-12">
       <SectionHeading
         eyebrow="Servicios"
-        title="Capacidades estratégicas"
-        description="Cada servicio se diseña a la medida del contexto organizacional, el perfil de riesgo y los objetivos de su empresa o institución."
+        title="Servicios de monitoreo e inteligencia de medios"
+        description="Cada servicio se diseña a la medida de los criterios de monitoreo, el perfil de riesgo y los objetivos de su empresa o institución."
       />
       <div className="grid gap-5 sm:grid-cols-2">
         {services.map((service, index) => {
