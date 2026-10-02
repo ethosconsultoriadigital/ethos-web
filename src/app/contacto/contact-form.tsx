@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-import { useActionState } from "react";
+import { useActionState, useEffect, useRef } from "react";
 
 import {
   submitContactForm,
@@ -11,6 +11,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { trackMetaEvent } from "@/lib/meta-pixel";
 import { catalogServices } from "@/lib/services";
 import { cn } from "@/lib/utils";
 
@@ -44,6 +45,14 @@ export function ContactForm() {
   );
 
   const isSuccess = state.status === "success";
+  const leadTracked = useRef(false);
+
+  useEffect(() => {
+    if (isSuccess && !leadTracked.current) {
+      leadTracked.current = true;
+      trackMetaEvent("Lead");
+    }
+  }, [isSuccess]);
 
   return (
     <form action={formAction} className="space-y-4" noValidate>

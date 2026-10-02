@@ -2,6 +2,7 @@
 
 import { usePathname } from "next/navigation";
 
+import { trackMetaEvent } from "@/lib/meta-pixel";
 import { getServiceBySlug } from "@/lib/services";
 
 const DEFAULT_WHATSAPP_TEXT =
@@ -46,6 +47,9 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Escribir a ETHOS por WhatsApp"
+      onClick={() => {
+        trackMetaEvent("Contact");
+      }}
       className="fixed right-4 z-50 flex size-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-105 hover:bg-[#1ebe57] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ethos-gold focus-visible:ring-offset-2 focus-visible:ring-offset-ethos-navy bottom-[max(1rem,env(safe-area-inset-bottom))]"
     >
       <WhatsAppIcon className="size-7" />

@@ -542,6 +542,15 @@ export default function AvisoDePrivacidadPage() {
             las cookies no indispensables mediante las opciones disponibles en
             el sitio o en su navegador.
           </p>
+          {/* TODO: revisión legal */}
+          <p>
+            Asimismo, cuando esté activado, el sitio puede utilizar el píxel de
+            Meta (Facebook) para medir visitas a páginas de servicios, envíos
+            del formulario de contacto e interacciones con WhatsApp. Estos
+            eventos no incluyen nombre, correo ni teléfono en el navegador. Meta
+            puede procesar identificadores técnicos conforme a sus propias
+            políticas de privacidad.
+          </p>
         </PrivacySection>
 
         <PrivacySection number={15} title="Menores de edad">

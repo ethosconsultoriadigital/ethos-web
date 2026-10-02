@@ -3,7 +3,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+import { MetaViewContent } from "@/components/meta-view-content";
 import { ServiceCard } from "@/components/services/service-card";
+import { WhatsAppCtaLink } from "@/components/whatsapp-cta-link";
 import { Section } from "@/components/layout/section";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Badge } from "@/components/ui/badge";
@@ -147,6 +149,10 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
   return (
     <>
       <JsonLd service={service} />
+      <MetaViewContent
+        contentName={service.name}
+        contentCategory={service.group}
+      />
 
       <section className="relative overflow-hidden border-b border-border/40 px-6 pt-16 pb-20 md:pt-24 md:pb-28">
         <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
@@ -174,14 +180,7 @@ export default async function ServiceDetailPage({ params }: ServicePageProps) {
                 Solicitar propuesta
               </Link>
               {whatsappHref ? (
-                <Link
-                  href={whatsappHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cn(buttonVariants({ size: "lg", variant: "outline" }))}
-                >
-                  Escribir por WhatsApp
-                </Link>
+                <WhatsAppCtaLink href={whatsappHref} />
               ) : null}
             </div>
           </FadeIn>
