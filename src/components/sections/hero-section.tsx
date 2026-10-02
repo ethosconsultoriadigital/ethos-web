@@ -36,9 +36,9 @@ export function HeroSection() {
 
           <FadeIn delay={0.16}>
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-ethos-muted md:text-xl">
-              Monitoreo de medios, análisis de reputación y alertas
-              informativas para empresas e instituciones que
-              no pueden permitirse improvisar.
+              Estrategia, comunicación, investigación y desarrollo digital
+              para empresas e instituciones que no pueden permitirse
+              improvisar.
             </p>
           </FadeIn>
 
