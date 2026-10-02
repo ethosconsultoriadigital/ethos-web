@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import { Logo } from "@/components/brand/logo";
 import { navigation } from "@/lib/content";
+import { catalogServices } from "@/lib/services";
 import { siteConfig } from "@/lib/site";
 
 export function SiteFooter() {
@@ -9,7 +10,7 @@ export function SiteFooter() {
 
   return (
     <footer className="border-t border-border/60 bg-ethos-navy-light px-6 py-14">
-      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
+      <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1.2fr_1fr]">
         <div>
           <Logo variant="footer" />
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-ethos-muted">
@@ -30,6 +31,24 @@ export function SiteFooter() {
                   className="text-sm text-ethos-muted transition-colors hover:text-ethos-white"
                 >
                   {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div>
+          <p className="text-xs font-medium tracking-[0.2em] text-ethos-white uppercase">
+            Servicios
+          </p>
+          <ul className="mt-4 space-y-2">
+            {catalogServices.map((service) => (
+              <li key={service.slug}>
+                <Link
+                  href={`/servicios/${service.slug}`}
+                  className="text-sm text-ethos-muted transition-colors hover:text-ethos-white"
+                >
+                  {service.name}
                 </Link>
               </li>
             ))}
@@ -74,7 +93,7 @@ export function SiteFooter() {
             Aviso de privacidad
           </Link>
           <p className="text-ethos-muted/80">
-            Monitoreo de medios · Reputación corporativa
+            Estrategia · Comunicación · Reputación
           </p>
         </div>
       </div>
