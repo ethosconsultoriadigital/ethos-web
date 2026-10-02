@@ -1,3 +1,5 @@
+import { Suspense } from "react";
+
 import { ContactForm } from "@/app/contacto/contact-form";
 import { SectionImage } from "@/components/brand/section-image";
 import { Section } from "@/components/layout/section";
@@ -30,16 +32,22 @@ export default function ContactoPage() {
           />
         </FadeIn>
         <FadeIn>
-        <Card className="border-border/60 bg-card/50 lg:max-w-none">
-          <CardHeader>
-            <CardTitle className="text-ethos-white">
-              Solicitud de consulta
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
-            <ContactForm />
-          </CardContent>
-        </Card>
+          <Card className="border-border/60 bg-card/50 lg:max-w-none">
+            <CardHeader>
+              <CardTitle className="text-ethos-white">
+                Solicitud de consulta
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Suspense
+                fallback={
+                  <p className="text-sm text-ethos-muted">Cargando formulario…</p>
+                }
+              >
+                <ContactForm />
+              </Suspense>
+            </CardContent>
+          </Card>
         </FadeIn>
       </div>
     </Section>

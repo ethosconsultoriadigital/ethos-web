@@ -34,6 +34,7 @@ export async function sendContactEmail(input: SendContactEmailInput) {
   const resend = new Resend(apiKey);
 
   const company = input.company?.trim() || "No especificada";
+  const service = input.service?.trim() || "No especificado";
   const formattedDate = new Intl.DateTimeFormat("es-MX", {
     dateStyle: "full",
     timeStyle: "short",
@@ -51,6 +52,7 @@ export async function sendContactEmail(input: SendContactEmailInput) {
       `Nombre: ${input.name}`,
       `Correo: ${input.email}`,
       `Institución: ${company}`,
+      `Servicio de interés: ${service}`,
       `Fecha: ${formattedDate}`,
       "",
       "Mensaje:",
@@ -72,6 +74,10 @@ export async function sendContactEmail(input: SendContactEmailInput) {
           <tr>
             <td style="padding: 8px 0; color: #64748b;">Institución</td>
             <td style="padding: 8px 0;">${escapeHtml(company)}</td>
+          </tr>
+          <tr>
+            <td style="padding: 8px 0; color: #64748b;">Servicio</td>
+            <td style="padding: 8px 0;">${escapeHtml(service)}</td>
           </tr>
           <tr>
             <td style="padding: 8px 0; color: #64748b;">Fecha</td>

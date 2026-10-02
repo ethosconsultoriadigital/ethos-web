@@ -12,11 +12,17 @@ export const contactFormSchema = z.object({
     .email("Ingrese un correo electrónico válido.")
     .max(254),
   company: z.string().trim().max(160).optional(),
+  service: z.string().trim().max(160).optional(),
   message: z
     .string()
     .trim()
     .min(10, "Describa su contexto con al menos 10 caracteres.")
     .max(5000, "El mensaje es demasiado largo."),
+  privacyConsent: z
+    .boolean()
+    .refine((value) => value === true, {
+      message: "Debe aceptar el aviso de privacidad para continuar.",
+    }),
 });
 
 export type ContactFormInput = z.infer<typeof contactFormSchema>;

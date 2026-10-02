@@ -8,7 +8,10 @@ export type ContactFormState = {
   status: "idle" | "success" | "error";
   message?: string;
   fieldErrors?: Partial<
-    Record<"name" | "email" | "company" | "message", string>
+    Record<
+      "name" | "email" | "company" | "service" | "message" | "privacyConsent",
+      string
+    >
   >;
 };
 
@@ -20,11 +23,14 @@ export async function submitContactForm(
     return { status: "success" };
   }
 
+  const privacyRaw = formData.get("privacyConsent");
   const parsed = contactFormSchema.safeParse({
     name: formData.get("name"),
     email: formData.get("email"),
     company: formData.get("company") || undefined,
+    service: formData.get("service") || undefined,
     message: formData.get("message"),
+    privacyConsent: privacyRaw === "on" || privacyRaw === "true" ? true : false,
   });
 
   if (!parsed.success) {
@@ -37,7 +43,9 @@ export async function submitContactForm(
         field === "name" ||
         field === "email" ||
         field === "company" ||
-        field === "message"
+        field === "service" ||
+        field === "message" ||
+        field === "privacyConsent"
       ) {
         fieldErrors[field] ??= issue.message;
       }
@@ -63,6 +71,7 @@ export async function submitContactForm(
             name: data.name,
             email: data.email,
             company: data.company || null,
+            service: data.service || null,
             message: data.message,
           },
         });
@@ -72,6 +81,8 @@ export async function submitContactForm(
     }
 
     await sendContactEmail({ ...data, submittedAt });
+
+    // TODO: CAPI — API de conversiones de Meta (servidor)
 
     return {
       status: "success",
