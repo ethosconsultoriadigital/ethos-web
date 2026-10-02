@@ -1,12 +1,19 @@
 import Link from "next/link";
 
-import { SectionImage } from "@/components/brand/section-image";
+import {
+  LegacyServiceCard,
+  ServiceCard,
+} from "@/components/services/service-card";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
 import { buttonVariants } from "@/components/ui/button";
-import { services } from "@/lib/content";
 import { pageMetadata } from "@/lib/metadata";
+import {
+  cybersecurityLegacyCard,
+  getServicesByGroup,
+  SHOW_CYBERSECURITY,
+} from "@/lib/services";
 import { cn } from "@/lib/utils";
 
 export const metadata = pageMetadata({
@@ -17,40 +24,62 @@ export const metadata = pageMetadata({
 });
 
 export default function ServiciosPage() {
+  const continuous = getServicesByGroup("continuo");
+  const projects = getServicesByGroup("proyecto");
+
   return (
     <Section className="pt-12">
       <SectionHeading
         eyebrow="Servicios"
-        title="Servicios de monitoreo e inteligencia de medios"
-        description="Cada servicio se diseña a la medida de los criterios de monitoreo, el perfil de riesgo y los objetivos de su empresa o institución."
+        title="Servicios de estrategia, comunicación y reputación"
+        description="Cada servicio se diseña a la medida de los objetivos, el perfil de riesgo y el contexto de su empresa u organización."
       />
-      <div className="grid gap-5 sm:grid-cols-2">
-        {services.map((service, index) => {
-          const Icon = service.icon;
-          return (
-            <FadeIn key={service.title} delay={index * 0.05}>
-              <article className="overflow-hidden rounded-xl border border-border/60 bg-card/40">
-                <SectionImage
-                  imageKey={service.visual}
-                  alt={service.title}
-                  aspectClassName="aspect-[2/1]"
-                  frameClassName="rounded-none rounded-t-xl border-0 border-b border-border/60 ring-0"
-                  sizes="(max-width: 768px) 100vw, 500px"
+
+      <div className="space-y-16">
+        <div>
+          <h2 className="mb-6 text-sm font-medium tracking-[0.25em] text-ethos-gold uppercase">
+            Servicios continuos
+          </h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {continuous.map((service, index) => (
+              <FadeIn key={service.slug} delay={index * 0.05}>
+                <ServiceCard service={service} />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+
+        <div>
+          <h2 className="mb-6 text-sm font-medium tracking-[0.25em] text-ethos-gold uppercase">
+            Servicios por proyecto
+          </h2>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {projects.map((service, index) => (
+              <FadeIn key={service.slug} delay={index * 0.05}>
+                <ServiceCard service={service} />
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+
+        {SHOW_CYBERSECURITY ? (
+          <div>
+            <h2 className="mb-6 text-sm font-medium tracking-[0.25em] text-ethos-gold uppercase">
+              Complementario
+            </h2>
+            <div className="grid gap-5 sm:grid-cols-2">
+              <FadeIn>
+                <LegacyServiceCard
+                  title={cybersecurityLegacyCard.title}
+                  description={cybersecurityLegacyCard.description}
+                  image={cybersecurityLegacyCard.image}
                 />
-                <div className="p-6">
-                  <Icon className="size-5 text-ethos-gold" aria-hidden />
-                  <h2 className="mt-4 text-lg font-semibold text-ethos-white">
-                    {service.title}
-                  </h2>
-                  <p className="mt-2 text-sm leading-relaxed text-ethos-muted">
-                    {service.description}
-                  </p>
-                </div>
-              </article>
-            </FadeIn>
-          );
-        })}
+              </FadeIn>
+            </div>
+          </div>
+        ) : null}
       </div>
+
       <FadeIn className="mt-12">
         <Link href="/contacto" className={cn(buttonVariants({ size: "lg" }))}>
           Solicitar propuesta

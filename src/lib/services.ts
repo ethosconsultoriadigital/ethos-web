@@ -417,3 +417,15 @@ export function getFeaturedHomeServices(): Service[] {
     .map((slug) => getServiceBySlug(slug))
     .filter((service): service is Service => Boolean(service));
 }
+
+// TODO: confirmar con Dirección si se mantiene
+export const SHOW_CYBERSECURITY = true;
+
+/** Tarjeta legacy de ciberseguridad (visible solo si SHOW_CYBERSECURITY). */
+export const cybersecurityLegacyCard = {
+  title: "Ciberseguridad y datos",
+  description:
+    "Asesoría en protección de información sensible y mitigación de vulnerabilidades reputacionales vinculadas a datos.",
+  image:
+    "https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+} as const;
