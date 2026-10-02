@@ -124,7 +124,7 @@ export const catalogServices: Service[] = [
     faqs: [
       {
         q: "¿Para qué tipo de sitios funciona?",
-        a: "Plantas, obras, centros de distribución y cualquier operación con impacto en su entorno inmediato.",
+        a: "Plantas, obras, centros de distribución y cualquier operación con impacto en su zona de influencia.",
       },
       {
         q: "¿Qué fuentes usan?",
