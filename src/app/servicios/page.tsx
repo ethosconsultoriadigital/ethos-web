@@ -6,13 +6,15 @@ import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
 import { buttonVariants } from "@/components/ui/button";
 import { services } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Servicios",
   description:
-    "Servicios de monitoreo de medios, protección de reputación, alertas, análisis de conversación digital, automatización y ciberseguridad.",
-};
+    "Diez servicios de estrategia, comunicación, investigación y desarrollo digital para empresas y organizaciones en México. Consulta confidencial.",
+  path: "/servicios",
+});
 
 export default function ServiciosPage() {
   return (

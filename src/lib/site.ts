@@ -1,25 +1,30 @@
+export const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
+  "https://www.ethosconsultoriadigital.com";
+
+export const SITE_NAME = "ETHOS";
+
 export const siteConfig = {
-  name: "ETHOS",
+  name: SITE_NAME,
   logo: "/Logo_ethos.png",
   logoAlt: "ETHOS — Consultoría y Estrategia Digital",
   title: "ETHOS | Consultoría y Estrategia Digital",
   description:
-    "Servicio B2B de monitoreo de medios, análisis de reputación y alertas informativas para empresas y usuarios autorizados.",
+    "Estrategia, comunicación y reputación para empresas y organizaciones en México: monitoreo de medios, due diligence, estudios de mercado y software a la medida.",
   keywords: [
     "monitoreo de medios",
-    "análisis de reputación",
-    "alertas informativas",
     "reputación corporativa",
-    "inteligencia de medios",
+    "inteligencia regulatoria",
+    "due diligence",
+    "estudios de mercado",
+    "prospección B2B",
+    "desarrollo de software a la medida",
+    "consultoría estratégica",
     "Guadalajara",
     "México",
-    "empresas",
-    "B2B",
   ],
   locale: "es_MX",
-  url:
-    process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") ??
-    "https://ethos.com.mx",
+  url: SITE_URL,
 } as const;
 
 export const brandColors = {

@@ -11,8 +11,8 @@ export const siteImages = {
   hero: "/images/arquitectura-corporativa.png",
   megaphone: "/images/colocacion-contenido.png",
   security: unsplash("photo-1563013544-824ae1b704d3", 800),
-  government: "/images/gobierno-entrante.png",
-  campaign: "/images/campanas-politicas.png",
+  government: "/images/empresas-marcas.png",
+  campaign: "/images/equipos-comunicacion.png",
   profile: unsplash("photo-1560250097-0b93528c311a", 800),
   discretion: unsplash("photo-1517245386807-bb43f82c33c4", 800),
 

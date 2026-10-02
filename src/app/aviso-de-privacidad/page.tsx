@@ -3,13 +3,15 @@ import Link from "next/link";
 import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
+import { pageMetadata } from "@/lib/metadata";
 import { privacyConfig } from "@/lib/privacy";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Aviso de Privacidad",
   description:
     "Aviso de Privacidad Integral de ETHOS y EthosIA: tratamiento de datos personales, derechos ARCO, WhatsApp y cookies.",
-};
+  path: "/aviso-de-privacidad",
+});
 
 function PrivacySection({
   number,

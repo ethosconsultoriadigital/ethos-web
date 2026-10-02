@@ -7,13 +7,15 @@ import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
 import { buttonVariants } from "@/components/ui/button";
 import { portfolioWorks } from "@/lib/content";
+import { pageMetadata } from "@/lib/metadata";
 import { cn } from "@/lib/utils";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Trabajos",
   description:
     "Experiencia y proyectos de ETHOS en reputación digital, estrategia institucional y consultoría para empresas e instituciones en México.",
-};
+  path: "/trabajos",
+});
 
 export default function TrabajosPage() {
   const hasWorks = portfolioWorks.length > 0;

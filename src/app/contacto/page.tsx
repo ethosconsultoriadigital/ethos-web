@@ -4,12 +4,14 @@ import { Section } from "@/components/layout/section";
 import { SectionHeading } from "@/components/layout/section-heading";
 import { FadeIn } from "@/components/motion/fade-in";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { pageMetadata } from "@/lib/metadata";
 
-export const metadata = {
+export const metadata = pageMetadata({
   title: "Contacto",
   description:
     "Formulario de contacto confidencial con ETHOS. Consultoría en reputación digital y estrategia institucional en México.",
-};
+  path: "/contacto",
+});
 
 export default function ContactoPage() {
   return (

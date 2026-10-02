@@ -53,3 +53,39 @@ export function createSiteMetadata(): Metadata {
     },
   };
 }
+
+type PageMetadataInput = {
+  title: string;
+  description: string;
+  path: `/${string}` | "/";
+};
+
+/** Metadatos por página con canonical y og:url propios. */
+export function pageMetadata({
+  title,
+  description,
+  path,
+}: PageMetadataInput): Metadata {
+  const { name, locale } = siteConfig;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: path,
+    },
+    openGraph: {
+      type: "website",
+      locale,
+      url: path,
+      siteName: name,
+      title,
+      description,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
+  };
+}
