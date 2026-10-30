@@ -4,6 +4,9 @@ export const SITE_URL =
 
 export const SITE_NAME = "ETHOS";
 
+/** Correo oficial. Valor por defecto si falta CONTACT_TO_EMAIL. */
+export const OFFICIAL_CONTACT_EMAIL = "contacto@ethosconsultoriadigital.com";
+
 export const siteConfig = {
   name: SITE_NAME,
   logo: "/Logo_ethos.png",

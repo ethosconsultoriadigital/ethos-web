@@ -2,6 +2,7 @@
 
 import { sendContactEmail } from "@/lib/email/send-contact-email";
 import { getDb } from "@/lib/db";
+import { OFFICIAL_CONTACT_EMAIL } from "@/lib/site";
 import { contactFormSchema } from "@/lib/validations/contact";
 
 export type ContactFormState = {
@@ -95,7 +96,7 @@ export async function submitContactForm(
     return {
       status: "error",
       message:
-        "No pudimos enviar su solicitud en este momento. Intente nuevamente o escríbanos directamente a ethosconsultoriadigital@gmail.com.",
+        `No pudimos enviar su solicitud en este momento. Intente nuevamente o escríbanos directamente a ${OFFICIAL_CONTACT_EMAIL}.`,
     };
   }
 }

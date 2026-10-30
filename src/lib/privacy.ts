@@ -1,3 +1,5 @@
+import { OFFICIAL_CONTACT_EMAIL } from "@/lib/site";
+
 /**
  * Datos del Aviso de Privacidad.
  * Actualizar domicilio completo y razón social cuando se confirmen legalmente.
@@ -7,8 +9,8 @@ export const privacyConfig = {
   legalName: "TYCHE DATA, S.A. DE C.V.",
   commercialBrands: "ETHOS y EthosIA",
   address: "Guadalajara, Jalisco, México",
-  privacyEmail: "ethosconsultoriadigital@gmail.com",
-  supportEmail: "ethosconsultoriadigital@gmail.com",
+  privacyEmail: OFFICIAL_CONTACT_EMAIL,
+  supportEmail: OFFICIAL_CONTACT_EMAIL,
   phone: null as string | null,
   privacyOfficer: "Área de Privacidad",
   website: "https://www.ethosconsultoriadigital.com",
