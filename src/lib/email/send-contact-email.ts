@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 import type { ContactFormInput } from "@/lib/validations/contact";
-import { siteConfig } from "@/lib/site";
+import { OFFICIAL_CONTACT_EMAIL, siteConfig } from "@/lib/site";
 
 type SendContactEmailInput = ContactFormInput & {
   submittedAt: Date;
@@ -18,7 +18,7 @@ function escapeHtml(value: string) {
 
 function getEmailConfig() {
   const apiKey = process.env.RESEND_API_KEY;
-  const to = process.env.CONTACT_TO_EMAIL ?? "ethosconsultoriadigital@gmail.com";
+  const to = process.env.CONTACT_TO_EMAIL?.trim() || OFFICIAL_CONTACT_EMAIL;
   const from =
     process.env.CONTACT_FROM_EMAIL ?? `${siteConfig.name} Contacto <onboarding@resend.dev>`;
 
